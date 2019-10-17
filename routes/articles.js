@@ -11,9 +11,10 @@ var fs=require('fs')
 
 // 新增和修改文章
 router.post('/write',(req,res,next)=>{
-    let{title,content,username,time}=req.body  
-    if(time){
-        articleModel.updateOne({'time':time},{content,title,username}).then((data)=>{
+    let{title,content,username,time2}=req.body
+    if(time2){
+        let time=Date.now()
+        articleModel.updateOne({time:parseInt(time2)},{content,title,username,time}).then((data)=>{
             res.redirect('/')
         }).catch((err)=>{
             console.log(err)

@@ -12,7 +12,7 @@
         <form action="/articles/write" method="post">
             <input type="hidden" name="username" value="<%= doc.username%>" >
             <!-- <input type="hidden" name="id" value="<%= doc._id%>" > -->
-            <input type="hidden" name="time" value="<%= doc.time%>" >
+            <input type="hidden" name="time2" value="<%= doc.time%>" >
             <input type="text" name="title" placeholder="请输入文章标题" value="<%= doc.title%>">
             <textarea name="content" class="xheditor"><%- doc.content%></textarea>
           <%  if(doc.time){   %>
